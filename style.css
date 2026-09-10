@@ -1,19 +1,38 @@
-*{
-    padding:10px;
-    margin:0;
+* {
+  padding: 10px;
+  margin: 0;
 }
 
 
-section{
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+section {
   margin: 20px 0;
 }
 
-ul{
+ul {
   padding-left: 40px;
 }
 
 ul ul ul {
   margin-top: 10px;
+}
+
+p {
+  color: #996dad;
+  background-color: #26b0b5;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: rgba(121, 174, 147, 0.928) solid 1px;
+  box-shadow: 10px 10px 5px lightblue;
+  border-radius: 8px;
 }
 
 /* 1. /* 1. Headings */
@@ -37,20 +56,20 @@ ul ul ul {
 
 
 /* Main list item colors */
-ul > li:nth-child(1) {
+ul>li:nth-child(1) {
   color: #2a52be;
 }
 
-ul > li:nth-child(2) {
+ul>li:nth-child(2) {
   color: #228b22;
 }
 
-ul > li:nth-child(3) {
+ul>li:nth-child(3) {
   color: #dc143c;
 }
 
 /* Sub-list */
-ul ul > li:nth-child(1) {
+ul ul>li:nth-child(1) {
   color: #9400d3;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -58,7 +77,7 @@ ul ul > li:nth-child(1) {
 
 
 /* Inner sub-list */
-ul ul ul > li:nth-child(1) {
+ul ul ul>li:nth-child(1) {
   color: #ff8c00;
   background-color: #fdf6e3;
   border-radius: 8px;
@@ -66,8 +85,8 @@ ul ul ul > li:nth-child(1) {
 }
 
 
-/* Second violet item in sublist */
-ul ul > li:nth-child(3) {
+/* Second violet item in sub-list */
+ul ul>li:nth-child(3) {
   color: #9400d3;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -75,7 +94,7 @@ ul ul > li:nth-child(3) {
 
 
 /* Final main list item */
-ul > li:last-child {
+ul>li:last-child {
   color: #2a52be;
 }
 
