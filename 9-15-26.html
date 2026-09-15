@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        *{box-sizing: border-box;}
+        div{background-color: aqua;
+        padding: 20px;
+        width: 100px;
+        margin: 10px;
+        box-sizing: border-box;}
+        #second{
+            margin-top: 20px;
+            border: solid 20px blue;
+        }
+        span{background-color: lightcoral;
+            height: 20px;
+            width: 50px;
+            padding: 5px;
+            margin: 20px;
+            display: inline-block;
+        }
+        #parent{background-color:aqua;
+            box-sizing: border-box;
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+        #child{background-color: blue;
+            border: 1px solid;
+            margin: 20px;
+            height: 50px;
+            width: 50px;
+        }
+        ul{
+            border: solid 2px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>First</li>
+    <li>Second</li>
+</ul>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+    <div id="second">div2</div>
+    <div><span>Span</span></div>
+</body>
+</html>
+
+/* inline elements - default height is 0, second span doesn't accept width, browser ignores height and width, but you can change the background color, padding, and margin.
+Act weird with vertical padding and margin, but horizontal padding and margin work fine.
+If you want to change the height and width of an inline element, you need to change the display property to inline-block or block.
+*/
