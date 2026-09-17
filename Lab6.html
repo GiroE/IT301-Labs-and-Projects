@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .flex-parent {
+            border: 1px solid;
+            flex-direction: row;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .Image1, .Image2, .Image3 {
+            width: 100px;
+            padding: 5px;
+            height: 100px;
+            box-sizing: border-box;
+        }
+        .Image1{
+            min-height: 50px;
+        }
+        .Image2{
+            min-height: 150px;
+        }
+        .Image3{
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-parent">
+        <img src="https://picsum.photos/100/100?random=1" alt="Image 1" class="Image1">
+        <img src="https://picsum.photos/100/150?random=2" alt="Image 2" class="Image2">
+        <img src="https://picsum.photos/100/100?random=3" alt="Image 3" class="Image3">
+    </div>
+</body>
+</html>
