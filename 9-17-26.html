@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .flex-parent {
+            border: 1px solid;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            width: 100px;
+        }
+        div div {
+            background-color: antiquewhite;
+            margin: 10px;
+            width: 50px;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+        .child1{
+            min-height: 50px;
+        }
+        .child2{
+            min-height: 100px;
+        }
+        .child3{
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-parent">
+        <div class="child1">Child1</div>
+        <div class="child2">Child2</div>
+        <div class="child3">Child3</div>
+    </div>
+</body>
+</html>
