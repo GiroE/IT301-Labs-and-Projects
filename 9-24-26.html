@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body{
+            height: 200vh;
+        }
+       .parent{
+        background-color: blueviolet;
+        padding: 5px;
+       }
+       .first{
+        position: sticky;
+        top: 0;
+        background-color:aquamarine;
+       }
+       .second{
+        background-color: blanchedalmond;
+       }
+       .third{
+        background-color:chartreuse;
+       }
+
+       .box{
+        background-color: orange;
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
+       }
+       .box:hover{
+        transform: rotateY(45deg);
+       }
+       /* to make box in the center, make parent relative and child absolute. set left to 50% which will move to middle */
+       /* then do transform:translate:-50% */
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent
+        <div class="first">First</div>
+        <div class="second">Second</div>
+        <div class="third">Third</div>
+    </div>
+
+    <div class="box">
+        Box
+    </div>
+
+</body>
+</html>
