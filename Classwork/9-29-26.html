@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design (media query)</title>
+    <style>
+        h1{color: blue;}
+        @media screen and (max-width:500px){
+            h1{color: red;}
+            h2{background-color: lightblue;}
+        }
+        @media (min-width: 581px){
+              ul {
+                display: flex;
+                justify-content: space-between;}
+        }
+        /* both conditions have to be met for style to take effect */
+        /* 500 or less use max-width */
+        /* 500 or more use min-width */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            Media Query</h1>
+            <nav><ul>
+                <li>Home</li>
+                <li>Cats</li>
+                <li>Dogs</li>
+            </ul></nav>
+        <main>
+            <h2>
+                Practice</h2>
+        </main>
+    </header>
+</body>
+</html>
