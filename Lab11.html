@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+    <style>
+        #box{
+            background-color: blue;
+            color: aliceblue;
+            font-size: 1.5em;
+            padding: 3px;
+            text-align: center;
+            width: 200px;
+        }
+        #box:hover{
+            cursor: pointer;
+            background-color: yellow;
+        }
+        div {
+            height: 75vh;
+        }
+    </style>
+</head>
+<body>
+   <p id = "box">Click Me! 😊 </p>
+   <div id = "move_around"></div>
+    <script>
+        const box = document.getElementById('box');
+        function myFunction(event){
+            event.target.style.backgroundColor = 'red';
+            box.textContent = 'Ouch! 🤕';
+        }
+        function mouseover(event){
+            event.target.style.backgroundColor = 'yellow';
+            box.textContent = 'Do not click! 😠';
+        }
+        function mouseOut(event){
+            event.target.style.backgroundColor = 'lightgreen';
+            box.textContent = 'Phew! 😌';
+        }
+        function doubleClick(event){
+            event.target.style.backgroundColor = 'pink';
+            box.textContent = 'Double trouble! 🤩';
+        }
+        box.addEventListener('click', myFunction);
+        box.addEventListener('mouseover', mouseover);
+        box.addEventListener('mouseout', mouseOut);
+        box.addEventListener('dblclick', doubleClick);
+        const move_around = document.getElementById('move_around');
+        move_around.addEventListener('mousemove', function(event){
+            box.style.backgroundColor = 'lightblue';
+            box.textContent = 'I see you! 👀';
+        });
+
+    </script>
+
+</body>
+</html>
