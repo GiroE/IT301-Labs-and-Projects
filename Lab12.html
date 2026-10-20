@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab12</title>
+</head>
+<body>
+    <form action="#">
+        <label for="name">What is your name?</label>
+        <input type="text" id="name">
+        <button id="button" type="button">Submit</button>
+        <p id="result"></p>
+
+        <p>Number one:</p>
+        <input type="number" id="First">
+
+        <p>Number two:</p>
+        <input type="number" id="Second">
+
+        <p>Choose an operation:</p>
+
+        <input type="radio" name="operation" value="add"> Addition
+        <input type="radio" name="operation" value="subtract"> Subtraction
+        <input type="radio" name="operation" value="multiply"> Multiplication
+        <input type="radio" name="operation" value="divide"> Division
+
+        <br><br>
+
+        <button id="Calculate" type="button">Calculate</button>
+        <button id="Clear" type="reset">Clear</button>
+
+        <p id="answer"></p>
+    </form>
+
+    <script>
+        const name = document.getElementById("name");
+        const result = document.getElementById("result");
+        const answer = document.getElementById("answer");
+
+        document.getElementById("button").addEventListener("click", function(event) {
+            if (name.value.trim() === "") {
+                result.textContent = "Please enter your name.";
+            } else {
+                result.textContent = "Greetings, " + name.value + "!";
+            }
+        });
+
+        const add = (a, b) => a + b;
+        const sub = (a, b) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => a / b;
+
+        document.getElementById("Calculate").addEventListener("click", function(event) {
+            const first = document.getElementById("First").value;
+            const second = document.getElementById("Second").value;
+
+            const operation = document.querySelector('input[name="operation"]:checked');
+
+            if (first === "" || second === "") {
+                answer.textContent = "Please enter both numbers.";
+                return;
+            }
+
+            if (operation === null) {
+                answer.textContent = "Please select an operation.";
+                return;
+            }
+
+            const a = Number(first);
+            const b = Number(second);
+            let calculation;
+
+            if (operation.value === "add") {
+                calculation = add(a, b);
+            } else if (operation.value === "subtract") {
+                calculation = sub(a, b);
+            } else if (operation.value === "multiply") {
+                calculation = multiply(a, b);
+            } else if (operation.value === "divide") {
+                if (b === 0) {
+                    answer.textContent = "Cannot divide by zero.";
+                    return;
+                }
+                calculation = divide(a, b);
+            }
+
+            answer.textContent = "Answer: " + calculation;
+        });
+
+        document.getElementById("Clear").addEventListener("click", function(event) {
+            result.textContent = "";
+            answer.textContent = "";
+        });
+
+        const greet = myName => console.log(myName);
+        const greeting = greet;
+
+        greeting("Hello!");
+    </script>
+</body>
+</html>
