@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCU Infinity Saga | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Website header and navigation -->
+    <header>
+        <h1>THE Marvel Cinematic Universe (MCU)</h1>
+
+        <!-- Navigation shared across all five pages -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="phase1.html">Phase One</a></li>
+                <li><a href="phase2.html">Phase Two</a></li>
+                <li><a href="phase3.html">Phase Three</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Contact page introduction -->
+        <section class="hero">
+            <h2>Join the Marvel Conversation!</h2>
+
+            <p>
+                Every Marvel fan has a favorite hero, movie,
+                or moment from the Infinity Saga. Share your
+                thoughts about the first three phases of
+                the Marvel Cinematic Universe!
+            </p>
+        </section>
+
+        <!-- Contact form section -->
+        <section class="contact-section">
+            <h2>Marvel Fan Feedback</h2>
+
+            <p>
+                Fill out the form below to share your
+                favorite parts of the MCU Infinity Saga.
+            </p>
+
+            <!-- Form uses built-in HTML validation -->
+            <form class="contact-form" action="#" method="get">
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        minlength="2"
+                        maxlength="50"
+                        required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required>
+                </div>
+
+                <!-- Favorite MCU phase -->
+                <div class="form-group">
+                    <label for="favorite-phase">
+                        Favorite MCU Phase:
+                    </label>
+
+                    <select
+                        id="favorite-phase"
+                        name="favorite-phase"
+                        required>
+
+                        <option value="">
+                            Select your favorite phase
+                        </option>
+
+                        <option value="phase1">
+                            Phase One (2008-2012)
+                        </option>
+
+                        <option value="phase2">
+                            Phase Two (2013-2015)
+                        </option>
+
+                        <option value="phase3">
+                            Phase Three (2016-2019)
+                        </option>
+
+                    </select>
+                </div>
+
+                <!-- Favorite Marvel hero -->
+                <div class="form-group">
+                    <label for="favorite-hero">
+                        Favorite Marvel Hero:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="favorite-hero"
+                        name="favorite-hero"
+                        placeholder="Example: Iron Man"
+                        maxlength="50"
+                        required>
+                </div>
+
+                <!-- Favorite MCU movie -->
+                <div class="form-group">
+                    <label for="favorite-movie">
+                        Favorite MCU Movie:
+                    </label>
+
+                    <select
+                        id="favorite-movie"
+                        name="favorite-movie"
+                        required>
+
+                        <option value="">
+                            Select your favorite movie
+                        </option>
+
+                        <option value="ironman">
+                            Iron Man
+                        </option>
+
+                        <option value="avengers">
+                            The Avengers
+                        </option>
+
+                        <option value="winter-soldier">
+                            Captain America: The Winter Soldier
+                        </option>
+
+                        <option value="guardians">
+                            Guardians of the Galaxy
+                        </option>
+
+                        <option value="civil-war">
+                            Captain America: Civil War
+                        </option>
+
+                        <option value="black-panther">
+                            Black Panther
+                        </option>
+
+                        <option value="infinity-war">
+                            Avengers: Infinity War
+                        </option>
+
+                        <option value="endgame">
+                            Avengers: Endgame
+                        </option>
+
+                        <option value="other">
+                            Another MCU Movie
+                        </option>
+
+                    </select>
+                </div>
+
+                <!-- Written feedback -->
+                <div class="form-group">
+                    <label for="message">
+                        What is your favorite MCU moment?
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        minlength="10"
+                        maxlength="1000"
+                        placeholder="Tell us about your favorite Marvel moment..."
+                        required></textarea>
+                </div>
+
+                <!-- Submit and reset buttons -->
+                <div class="form-buttons">
+                    <button type="submit">
+                        Submit Feedback
+                    </button>
+
+                    <button type="reset" class="reset-button">
+                        Clear Form
+                    </button>
+                </div>
+
+            </form>
+
+            <p class="form-note">
+                Note: This is a demonstration form for a
+                class project. Submissions are not stored
+                or sent to anyone.
+            </p>
+
+        </section>
+
+        <!-- External Marvel resources -->
+        <section class="resources-section">
+            <h2>Explore More Marvel</h2>
+
+            <p>
+                Want to learn more about the Marvel
+                Cinematic Universe? Check out these
+                official Marvel resources.
+            </p>
+
+            <div class="resource-container">
+
+                <article class="resource-card">
+                    <h3>Marvel Official Website</h3>
+
+                    <p>
+                        Explore Marvel movies, characters,
+                        comics, and upcoming projects.
+                    </p>
+
+                    <a href="https://www.marvel.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit Marvel
+                    </a>
+                </article>
+
+                <article class="resource-card">
+                    <h3>Marvel Movies</h3>
+
+                    <p>
+                        Browse Marvel Studios films
+                        and learn more about the
+                        Marvel Cinematic Universe.
+                    </p>
+
+                    <a href="https://www.marvel.com/movies"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Explore Movies
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Return to homepage -->
+        <section class="contact-ending">
+            <h2>Thank You for Exploring the Infinity Saga!</h2>
+
+            <p>
+                From Iron Man to Avengers: Endgame,
+                the Infinity Saga introduced memorable
+                heroes, unforgettable battles, and
+                stories that shaped the MCU.
+            </p>
+
+            <a href="index.html" class="home-button">
+                Return to Homepage
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer>
+        <p>&copy; Giro Estrada | Not all rights reserved.</p>
+    </footer>
+
+</body>
+</html>
