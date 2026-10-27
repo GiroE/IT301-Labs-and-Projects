@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise fetch and API</title>
+</head>
+<body>
+    <script>
+        let pic = document.createElement('img');
+        let results = document.createElement('div');
+        let name = document.createElement('p');
+        let bttn = document.createElement('button');
+        let email = document.createElement('p');
+        let phone = document.createElement('p');
+
+        results.className = 'card';
+
+        bttn.type = 'button';
+        bttn.textContent = 'Generate Profile';
+
+        document.body.appendChild(bttn);
+        document.body.appendChild(results);
+
+        results.appendChild(pic);
+        results.appendChild(name);
+        results.appendChild(email);
+        results.appendChild(phone);
+
+        const getUser = async () => {
+            try {
+                let imgAdd = await fetch("https://randomuser.me/api/");
+                imgAdd = await imgAdd.json();
+
+                let user = imgAdd.results[0];
+
+                pic.src = user.picture.large;
+                pic.alt = 'Random user';
+
+                name.textContent = 'Name: ' + user.name.first + ' ' + user.name.last;
+                email.textContent = 'Email: ' + user.email;
+                phone.textContent = 'Phone: ' + user.phone;
+
+            } catch (reason) {
+                console.log(reason);
+            }
+        };
+
+        bttn.addEventListener('click', getUser);
+    </script>
+</body>
+</html>
