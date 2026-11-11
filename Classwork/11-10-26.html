@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        .correct{
+            color: green;
+        }
+        .wrong
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my Fun Game</h1>
+    <form>
+        <label for="answer">Guess a number</label>
+        <input type="number" id = "answer">
+    </form>
+    <p id="result"></p>
+    <script>
+        const myNumber = Math.floor(Math.random() * 10+ 1);
+        const answer = document.getElementById("answer");
+        const result = document.getElementById("result");
+        console.log(myNumber);
+
+        document.querySelector("form").addEventListener("submit", (event)=>{
+            event.preventDefault();
+            console.log("Form submitted successfully");
+        });
+
+        answer.addEventListener('input', ()=>{
+            const isCorrect = answer.value == myNumber;
+            result.classList.toggle("correct", isCorrect);
+            result.classList.toggle("wrong", !isCorrect);
+
+            result.textContent = isCorrect ? "Correct Answer" : "Wrong....try again";
+            /* if( answer.value == myNumber){
+                result.textContent = "Correct!";
+                result.classList.add("correct");
+                result.classList.remove("wrong");
+
+
+            } else {
+                result.textContent = "Wrong ....try again!";
+                result.classList.add("wrong");
+            } */
+
+        });
+
+    </script>
+</body>
+</html>
